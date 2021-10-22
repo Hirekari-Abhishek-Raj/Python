@@ -1,8 +1,13 @@
-N=int(input())
+n=int(input())
+lst=[int(i) for i in input().split()]
+high=[]
+m=float('-inf')
+for i in range(n-1,-1,-1):
+    m=max(m,lst[i])
+    high.append(m)
 sum=0
-if N>=1:
-    A=[int(i)for i in input().split()]
-    for i in range(N):
-        p=max(A[i:N])
-        sum=sum+(p-A[i])
+x=n-1
+for i in range(n):
+    sum=sum+(high[x]-lst[i])
+    x-=1
 print(sum)
