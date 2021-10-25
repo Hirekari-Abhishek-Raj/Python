@@ -1,13 +1,8 @@
 n=int(input())
-lst=[]
-for i in range(n):
-    lst.append(int(input()))
-m=lst[0]
-for i in range(n):
-    if i==0:
-        print(lst[i])
-    else:
-        x=max(lst[i],m)
-        m=x
-        print(m)
-    
+a=int(input())
+print(a)
+for i in range(n-1):
+    b=int(input())
+    c=max(a,b)
+    print(c)
+    a=c
