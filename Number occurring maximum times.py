@@ -1,4 +1,5 @@
 dict={}
+flag=0
 n=int(input())
 for i in range(n):
     val=int(input())
@@ -9,5 +10,6 @@ for i in range(n):
 for i in dict.keys():
     if dict[i]==4:
         print(i)
-        break
-    
+        flag=1
+if flag==0:
+    print(-1)
